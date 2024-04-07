@@ -1,5 +1,3 @@
-Direct Translation:
-
 # vFrame Bundler Virtual File System Adapter
 
 ![vFrame](https://img.shields.io/badge/vFrame-Bundler_VFSAdapter-blue) [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com) [![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](#License)
