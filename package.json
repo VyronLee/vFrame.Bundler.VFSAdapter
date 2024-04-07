@@ -1,0 +1,18 @@
+{
+  "name": "com.vyronlee.vframe.bundler.vfs-adapter",
+  "version": "1.0.1",
+  "displayName": "vFrame Bundler VFSAdapter",
+  "description": "Adapter of asset bundle loader to support VFS with vFrame Bundler.",
+  "unity": "2021.3",
+  "keywords": [
+    "vFrame",
+    "vFrame Bundler,",
+    "vFrame VFS,"
+  ],
+  "author": {
+    "name": "VyronLee",
+    "email": "lwz_jz@hotmail.com",
+    "url": "https://vyronlee.com"
+  },
+  "license": "Apache-2.0"
+}
