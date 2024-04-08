@@ -1,6 +1,6 @@
 {
   "name": "com.vyronlee.vframe.bundler.vfs-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "vFrame Bundler VFSAdapter",
   "description": "Adapter of asset bundle loader to support VFS with vFrame Bundler.",
   "unity": "2021.3",
