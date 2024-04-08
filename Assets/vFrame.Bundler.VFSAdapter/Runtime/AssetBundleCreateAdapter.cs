@@ -1,6 +1,7 @@
 ﻿// ------------------------------------------------------------
 //         File: AssetBundleCreateAdapter.cs
-//        Brief: AssetBundleCreateAdapter.cs
+//        Brief: Provides functionality to load AssetBundles
+//               from a virtual file system.
 //
 //       Author: VyronLee, lwz_jz@hotmail.com
 //
