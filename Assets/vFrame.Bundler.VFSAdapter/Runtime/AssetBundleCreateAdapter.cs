@@ -11,7 +11,7 @@
 
 using System;
 using UnityEngine;
-using vFrame.Core.Base;
+using vFrame.Core;
 using vFrame.VFS;
 
 namespace vFrame.Bundler.VFSAdapter
