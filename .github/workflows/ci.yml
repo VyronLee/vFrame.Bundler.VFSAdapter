@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  editmode-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: vFrame.Bundler.VFSAdapter
+      - name: Checkout file dependencies
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        run: |
+          for repo in vFrame.Bundler vFrame.Core vFrame.VFS; do
+            gh repo clone "VyronLee/$repo" "../$repo" -- --depth 1 --branch develop
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          manifest = Path('vFrame.Bundler.VFSAdapter/Packages/manifest.json')
+          manifest.write_text(manifest.read_text().replace(
+              'file:D:/Workspace/vFrame/vFrame.Core/',
+              'file:../../vFrame.Core/'))
+          PY
+      - uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: vFrame.Bundler.VFSAdapter
+          unityVersion: 2022.3.62f3
+          testMode: EditMode
+          artifactsPath: artifacts/editmode
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editmode-results
+          path: artifacts/editmode
+          if-no-files-found: warn
