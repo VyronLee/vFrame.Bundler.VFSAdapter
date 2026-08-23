@@ -27,9 +27,9 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           manifest = Path('vFrame.Bundler.VFSAdapter/Packages/manifest.json')
-          manifest.write_text(manifest.read_text()
-              .replace('file:D:/Workspace/vFrame/vFrame.Core/', 'file:../vFrame.Core/')
-              .replace('file:../../', 'file:../'))
+          manifest.write_text(manifest.read_text().replace(
+              'file:D:/Workspace/vFrame/vFrame.Core/',
+              'file:../../vFrame.Core/'))
           PY
       - uses: game-ci/unity-test-runner@v4
         env:
