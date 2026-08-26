@@ -159,3 +159,4 @@ sysinfo.txt
 Assets/Plugins
 Assets/Plugins.meta
 Packages/packages-lock.json
+.codegraph/
