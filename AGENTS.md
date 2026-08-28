@@ -1,3 +1,6 @@
+# Repository Agent Guidance
+
+The workspace-level guidance in `../AGENTS.md` applies to this repository. Read its referenced rules when their trigger matches the task.
 # vFrame.Bundler.VFSAdapter
 
 Thin adapter so `vFrame.Bundler` loads AssetBundles from `.vpk` packages (VFS) without extracting to disk first.
@@ -69,4 +72,4 @@ dotnet build "D:/Workspace/vFrame/vFrame.Bundler.VFSAdapter/vFrame.Bundler.VFSAd
 
 ## Cross-Package Conventions
 
-For workspace-level conventions (Unity 2022.3.62f3, multi-package structure, coding standards, compilation verification), see `D:/Workspace/vFrame/CLAUDE.md`.
+For workspace-level conventions (Unity 2022.3.62f3, multi-package structure, coding standards, compilation verification), see `D:/Workspace/vFrame/AGENTS.md`.
